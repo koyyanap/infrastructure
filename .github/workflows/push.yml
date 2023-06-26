@@ -32,7 +32,7 @@ jobs:
       - name: deploying infrastructure
         uses: serverless/github-action@3.1
         with:
-          args: -c "serverless doctor && serverless deploy --stage dev"
+          args: -c "serverless deploy --stage dev"
           entrypoint: /bin/sh
 
 
