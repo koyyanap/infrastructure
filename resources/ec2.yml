@@ -1,8 +1,8 @@
 ---
 MyEC2Instance: 
   Type: AWS::EC2::Instance
-    Properties: 
-      ImageId: "ami-012b9156f755804f5"
+  Properties: 
+    ImageId: "ami-012b9156f755804f5"
       KeyName: "testkey"
       BlockDeviceMappings: 
       - DeviceName: "/dev/sdm"
