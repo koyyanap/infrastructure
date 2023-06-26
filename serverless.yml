@@ -8,4 +8,4 @@ provider:
   deploymentPrefix: infra
 
   resources:
-    - myEC2Instance: ${file(./resources/ec2.yml):MyEC2Instance}
+    - ${file(./resources/ec2.yml):MyEC2Instance}
