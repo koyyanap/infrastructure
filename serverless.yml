@@ -6,7 +6,6 @@ provider:
   deploymentMethod: direct
   region: ap-south-1
   deploymentPrefix: infra
-  deploymentBucket: infra-bucket
 
   Resources:
     MyEC2Instance: ${file(./resources/ec2.yml):MyEC2Instance}
