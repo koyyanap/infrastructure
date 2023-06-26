@@ -26,7 +26,6 @@ jobs:
       - name: Installing serverless
         run: |
           npm install -g serverless
-          npm-install-deployment-bucket
       - name: authenticating to AWS
         run: sls config credentials --provider aws --key ${{ env.AWS_ACCESS_KEY_ID }} --secret ${{ env.AWS_SECRET_ACCESS_KEY }}
       - name: deploying infrastructure
