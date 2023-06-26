@@ -2,25 +2,38 @@
 # The workflow Creates static website using aws s3
 name: AWS example workflow
 on:
-  push
+  push:
+    branches:
+      - '*'
 env:
-  AWS_REGION : us-east-1
-# permission can be added at job level or workflow level    
-permissions:
+  environment: dev
+  name: deploy infrastructure   
+
+jobs:
+  Infra:
+    name: deploy infrastructure  
+    runs-on: ubuntu-latest
+    permissions:
       id-token: write   # This is required for requesting the JWT
       contents: read    # This is required for actions/checkout
-jobs:
-  Ec2Instance:
-    runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
       - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: arn:aws:iam::603672719972:role/github-oidc-provider
-          role-session-name: samplerolesession
-          aws-region: ${{ env.AWS_REGION }}
+          aws-region: ap-south-1
+      - name: Installing serverless
+        run: |
+          npm install -g serverless
+      - name: authenticating to AWS
+        run: sls config credentials --provider aws --key ${{ env.AWS_ACCESS_KEY_ID }} --secret ${{ env.AWS_SECRET_ACCESS_KEY }}
+      - name: deploying infrastructure
+        uses: serverless/github-action@3.1
+        with:
+          args: -c "serverless doctor && serverless deploy --stage dev"
+          entrypoint: /bin/sh
 
 
 

@@ -1,0 +1,9 @@
+service: infra
+frameworkVersion: '3'
+configValidationMode: error
+provider:
+  name: aws
+  region: ap-south-1
+
+  resources:
+    - ${file(./resources/ec2.yml)}
