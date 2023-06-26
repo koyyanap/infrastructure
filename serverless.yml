@@ -1,6 +1,6 @@
 service: infra
 frameworkVersion: '3'
-configValidationMode: error
+configValidationMode: warn
 provider:
   name: aws
   deploymentMethod: direct
