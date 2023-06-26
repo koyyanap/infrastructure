@@ -6,8 +6,10 @@ plugins:
   - serverless-plugin-resource-tagging
 provider:
   name: aws
+  deploymentMethod: direct
   region: ap-south-1
-  deploymentBucket: infra
+  deploymentPrefix: infra
+  deploymentBucket: infra-bucket
 
   resources:
     - ${file(./resources/ec2.yml)}
