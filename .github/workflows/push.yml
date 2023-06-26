@@ -8,6 +8,7 @@ on:
 
 jobs:
   Infra:
+    environment: dev
     name: deploy infrastructure  
     runs-on: ubuntu-latest
     permissions:
