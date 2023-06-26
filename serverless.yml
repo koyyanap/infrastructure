@@ -7,5 +7,5 @@ provider:
   region: ap-south-1
   deploymentPrefix: infra
 
-  Resources:
-    myEC2Instance: ${file(./resources/ec2.yml):MyEC2Instance}
+  resources:
+    - myEC2Instance: ${file(./resources/ec2.yml):MyEC2Instance}
