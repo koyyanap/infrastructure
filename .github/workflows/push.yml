@@ -30,7 +30,7 @@ jobs:
       - name: authenticating to AWS
         run: sls config credentials --provider aws --key ${{ env.AWS_ACCESS_KEY_ID }} --secret ${{ env.AWS_SECRET_ACCESS_KEY }}
       - name: deploying infrastructure
-        uses: serverless/github-action@3
+        uses: serverless/github-action@3.2
         with:
           args: -c "serverless doctor && serverless deploy --stage dev"
           entrypoint: /bin/sh
