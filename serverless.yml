@@ -1,9 +1,13 @@
 service: infra
 frameworkVersion: '3'
 configValidationMode: error
+plugins:
+  - serverless-deployment-bucket
+  - serverless-plugin-resource-tagging
 provider:
   name: aws
   region: ap-south-1
+  deploymentBucket: infra
 
   resources:
     - ${file(./resources/ec2.yml)}
