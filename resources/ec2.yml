@@ -1,6 +1,6 @@
 ---
 Resources:
-  MyEC2Instance: 
+  myEC2Instance: 
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: "ami-012b9156f755804f5"
