@@ -20,7 +20,7 @@ jobs:
       - name: Git clone the repository
         uses: actions/checkout@v3
       - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::603672719972:role/github-oidc-provider
           aws-region: ap-south-1
@@ -30,7 +30,7 @@ jobs:
       - name: authenticating to AWS
         run: sls config credentials --provider aws --key ${{ env.AWS_ACCESS_KEY_ID }} --secret ${{ env.AWS_SECRET_ACCESS_KEY }}
       - name: deploying infrastructure
-        uses: serverless/github-action@3
+        uses: serverless/github-action@3.1
         with:
           args: -c "serverless doctor && serverless deploy --stage dev"
           entrypoint: /bin/sh
