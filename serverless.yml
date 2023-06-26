@@ -9,4 +9,4 @@ provider:
   deploymentBucket: infra-bucket
 
   Resources:
-    - ${file(./resources/ec2.yml)}
+    MyEC2Instance: ${file(./resources/ec2.yml):MyEC2Instance}
