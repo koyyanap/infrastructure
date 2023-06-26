@@ -7,5 +7,5 @@ provider:
   region: ap-south-1
   deploymentPrefix: infra
 
-  resources:
-    - ${file(./resources/ec2.yml)}
+resources:
+  - ${file(./resources/ec2.yml)}
