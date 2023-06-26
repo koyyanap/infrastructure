@@ -1,9 +1,6 @@
 service: infra
 frameworkVersion: '3'
 configValidationMode: error
-plugins:
-  - serverless-deployment-bucket
-  - serverless-plugin-resource-tagging
 provider:
   name: aws
   deploymentMethod: direct
