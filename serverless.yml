@@ -8,5 +8,5 @@ provider:
   deploymentPrefix: infra
   deploymentBucket: infra-bucket
 
-  resources:
+  Resources:
     - ${file(./resources/ec2.yml)}
