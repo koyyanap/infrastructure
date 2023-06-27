@@ -1,8 +1,11 @@
 ---
 Resources:
-  EC2Instance:
-    Type: AWS::EC2::Instance
+  NewKeyPair:
+    Type: 'AWS::EC2::KeyPair'
     Properties:
-      InstanceType: t2.micro
-      KeyName: mumbaikey
-      ImageId: ami-057752b3f1d6c4d6c
+      KeyName: MyKeyPair
+  Ec2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: ami-02b92c281a4d3dc79
+      KeyName: !Ref NewKeyPair
