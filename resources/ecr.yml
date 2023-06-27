@@ -11,6 +11,6 @@ Resources:
       QueueName: "SampleQueue"
 
   MySNSTopic:
-  Type: AWS::SNS::Topic
-  Properties:
-    TopicName: "SampleTopic"
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: "SampleTopic"
