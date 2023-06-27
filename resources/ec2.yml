@@ -4,7 +4,7 @@ Resources:
     Type: 'AWS::EC2::KeyPair'
     Properties:
       KeyName: MyKeyPair
-      keyType: rsa
+      KeyType: rsa
   Ec2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
