@@ -9,3 +9,8 @@ Resources:
     Type: AWS::SQS::Queue
     Properties: 
       QueueName: "SampleQueue"
+
+  MySNSTopic:
+  Type: AWS::SNS::Topic
+  Properties:
+    TopicName: "SampleTopic"
