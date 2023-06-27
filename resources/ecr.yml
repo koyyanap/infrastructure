@@ -4,3 +4,8 @@ Resources:
     Type: AWS::ECR::Repository
     Properties: 
       RepositoryName: "test-repository"
+
+  MyQueue: 
+    Type: AWS::SQS::Queue
+    Properties: 
+      QueueName: "SampleQueue"
