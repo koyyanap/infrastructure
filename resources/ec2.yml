@@ -7,5 +7,5 @@ Resources:
   Ec2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
-      ImageId: ami-02b92c281a4d3dc79
+      ImageId: ami-057752b3f1d6c4d6c
       KeyName: !Ref NewKeyPair
