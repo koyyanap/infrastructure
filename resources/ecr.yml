@@ -1,4 +1,6 @@
-MyRepository: 
-  Type: AWS::ECR::Repository
-  Properties: 
-    RepositoryName: "test-repository"
+---
+Resources:
+  MyRepository: 
+    Type: AWS::ECR::Repository
+    Properties: 
+      RepositoryName: "test-repository"
