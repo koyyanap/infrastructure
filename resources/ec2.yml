@@ -5,8 +5,8 @@ Resources:
     Properties:
       KeyName: MyKeyPair
       KeyType: rsa
-  # Ec2Instance:
-  #   Type: 'AWS::EC2::Instance'
-  #   Properties:
-  #     ImageId: ami-057752b3f1d6c4d6c
-  #     KeyName: !Ref NewKeyPair
+  Ec2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: ami-057752b3f1d6c4d6c
+      KeyName: !Ref NewKeyPair
