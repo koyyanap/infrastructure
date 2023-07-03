@@ -3,14 +3,14 @@ Resources:
   MyRepository: 
     Type: AWS::ECR::Repository
     Properties: 
-      RepositoryName: "sudheer-repository"
+      RepositoryName: "sudheer-23-repository"
 
-  MyQueue: 
+  MyQueue23: 
     Type: AWS::SQS::Queue
     Properties: 
-      QueueName: "SampleQueue"
+      QueueName: "SampleQueue-23"
 
-  MySNSTopic:
+  MySNSTopic23:
     Type: AWS::SNS::Topic
     Properties:
-      TopicName: "SampleTopic"
+      TopicName: "SampleTopic-23"

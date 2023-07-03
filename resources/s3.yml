@@ -1,8 +1,8 @@
 ---
 Resources:
-  S3Bucket:
+  S3Bucket23:
     Type: 'AWS::S3::Bucket'
     DeletionPolicy: Retain
     Properties:
-      BucketName: sudheer-s3-bucket
+      BucketName: sudheer-s3-bucket-23
       

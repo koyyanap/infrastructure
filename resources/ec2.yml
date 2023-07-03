@@ -1,6 +1,6 @@
 ---
 Resources:
-  EC2Instance:
+  EC2Instance23:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t2.micro
