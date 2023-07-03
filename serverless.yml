@@ -10,3 +10,4 @@ provider:
 resources:
   - ${file(./resources/ec2.yml)}
   - ${file(./resources/ecr.yml)}
+  - ${file(./resources/s3.yml)}
