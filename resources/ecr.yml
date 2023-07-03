@@ -3,7 +3,7 @@ Resources:
   MyRepository: 
     Type: AWS::ECR::Repository
     Properties: 
-      RepositoryName: "test-repository"
+      RepositoryName: "sudheer-repository"
 
   MyQueue: 
     Type: AWS::SQS::Queue
